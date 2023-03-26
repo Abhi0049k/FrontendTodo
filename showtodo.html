@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Todo List</title>
+    <link rel="stylesheet" href="./src/css/todopage.css">
+</head>
+<body>
+    <nav>
+        <h1>Todo App</h1>
+    </nav>
+    <div id="container">
+        <div id="left" class="scrollbar">
+            <div class="fetchingTodos">
+                <h2>Fetch Todos</h2>
+                <button onclick="fetchingTodo()">Fetch Todos</button>
+            </div>
+            <div class="fetchingTodos">
+                <h2>Add a new Todo</h2>
+                <form id="creationForm">
+                    <input type="text" id="createTask" placeholder="Enter a task">
+                    <input type="text" id="createDesc" placeholder="Enter description">
+                    <input type="text" id="createState" placeholder="Is your task complete or not">
+                    <input type="submit" value="Create a Todo">
+                </form>
+            </div>
+            <div class="fetchingTodos">
+                <h2>Update a todo</h2>
+                <form id="updationForm">
+                    <input type="text" id="updateId" placeholder="Enter id" disabled>
+                    <input type="text" id="updateTask" placeholder="Update your task">
+                    <input type="text" id="updateDesc" placeholder="Update your description">
+                    <input type="text" id="updateState" placeholder="What is state of your task">
+                    <input type="submit" value="Update">
+                </form>
+            </div>
+            
+        </div>
+        <div id="right">
+            <h2>Todo List</h2>
+            <div id="todoContainer" class="scrollbar">          
+            </div>
+        </div>
+    </div>
+    <script src="./src/script/todoList.js"></script>
+</body>
+</html>
